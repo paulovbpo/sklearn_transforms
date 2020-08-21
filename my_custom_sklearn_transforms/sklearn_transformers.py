@@ -14,3 +14,10 @@ class DropColumns(BaseEstimator, TransformerMixin):
         data = X.copy()
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.drop(labels=self.columns, axis='columns')
+    
+# removendo os outliers
+def drop_outliers(df, field_name):
+    distance = 1.5 * (np.percentile(df[field_name], 75) - np.percentile(df[field_name], 25))
+    df.drop(df[df[field_name] > distance + np.percentile(df[field_name], 75)].index, inplace=True)
+    df.drop(df[df[field_name] < np.percentile(df[field_name], 25) - distance].index, inplace=True)
+    return df
