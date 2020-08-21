@@ -15,11 +15,11 @@ class DropColumns(BaseEstimator, TransformerMixin):
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.drop(labels=self.columns, axis='columns')
 
- # removendo os outliers
+# Removendo os outliers
 class RemoverOutliers(BaseEstimator, TransformerMixin):
     def __init__(self):
-        return
-
+        pass
+    
     def fit(self, X, y=None):
         return self
     
