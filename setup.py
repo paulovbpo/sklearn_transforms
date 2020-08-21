@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(
-      name='my_custom_sklearn_transforms_1',
+      name='my_custom_sklearn_transforms',
       version='1.0',
       description='''
             This is a sample python package for encapsulating custom
@@ -13,7 +13,7 @@ setup(
       author_email='paulovbpo@hotmail.com',
       license='BSD',
       packages=[
-            'my_custom_sklearn_transforms_1'
+            'my_custom_sklearn_transforms'
       ],
       zip_safe=False
 )
