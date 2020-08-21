@@ -16,7 +16,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
         return data.drop(labels=self.columns, axis='columns')
 
  # removendo os outliers
-class Remover_Outliers(BaseEstimator, TransformerMixin):
+class RemoverOutliers(BaseEstimator, TransformerMixin):
     def __init__(self):
         return
 
